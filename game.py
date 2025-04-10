@@ -33,3 +33,6 @@ if st.session_state.game_over:
         st.session_state.count = 0
         st.session_state.game_over = False
         st.experimental_rerun()
+
+
+st.markdown("### 👨‍💻 Developed with ❤️ by **Sk**")
