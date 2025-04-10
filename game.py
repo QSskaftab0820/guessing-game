@@ -2,11 +2,12 @@ import streamlit as st
 import random
 
 st.title("🎰 Jackpot Guessing Game")
+st.write("You Have Only 5 Attempt !")
 
 if 'jackpot' not in st.session_state:
     st.session_state.jackpot = random.randint(1, 100)
-    st.session_state.count = 0
-    st.session_state.game_over = False
+    st.session_state.count = 5# 0
+    st.session_state.game_over = True #False
 
 name = st.text_input("Enter your name:")
 guess = st.number_input("Guess the jackpot number between 1 and 100:", min_value=1, max_value=100, step=1)
